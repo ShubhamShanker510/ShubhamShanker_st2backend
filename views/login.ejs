@@ -1,0 +1,178 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Form</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1))
+          no-repeat center fixed;
+        background-size: cover;
+      }
+
+      .container {
+        background: red;
+        width: 350px;
+        height: 400px;
+        padding-bottom: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: auto;
+        padding: 70px 50px 20px 50px;
+        border-style: solid;
+        border-color:  black;
+        border-radius: 10%;
+      }
+
+      .fl {
+        float: left;
+        width: 110px;
+        line-height: 35px;
+      }
+
+      .fontLabel {
+        color: white;
+        font-size: large;
+      }
+
+      .fr {
+        float: right;
+      }
+     
+
+      .clr {
+        clear: both;
+      }
+
+      .box {
+        width: 360px;
+        height: 35px;
+        margin-top: 10px;
+        font-family: verdana;
+        font-size: 12px;
+      }
+
+      .textBox {
+        height: 35px;
+        width: 190px;
+        border: none;
+        padding-left: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .new {
+        float: left;
+      }
+
+      .iconBox {
+        height: 35px;
+        width: 40px;
+        line-height: 38px;
+        text-align: center;
+        background: #ff6600;
+      }
+
+      .radio {
+        color: white;
+        background: #2d3e3f;
+        line-height: 38px;
+      }
+
+      .terms {
+        line-height: 35px;
+        text-align: center;
+        background: #2d3e3f;
+        color: white;
+      }
+
+      .submit {
+        float: right;
+        border: none;
+        color: red;
+        width: 110px;
+        height: 35px;
+        background: white;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin: 30px;
+        width: 100%;
+        margin-right: 10px;
+        height: 70px;
+        margin-top: 80px;
+        border-radius: 20px;
+      }
+      .submit:hover{
+        background-color:black ;
+        color:white;
+
+      }
+      marquee{
+        font-size: xx-large;
+        font-style: italic;
+        color: rgb(240, 153, 24);
+      }
+
+    </style>
+  </head>
+  <body>
+    <marquee behavior="scroll" direction="right"  ><h1><strong>LOGIN</strong></h1></marquee>
+    <!-- Body of Form starts -->
+    <div class="container">
+      <form action="/checkLogin" method="post" autocomplete="on">
+        <!--First name-->
+        <div class="box">
+          <label for="username" class="fl fontLabel"><strong>USERNAME</strong></label>
+          
+          <div class="fr">
+            <input
+              type="text"
+              name="username"
+              placeholder="ENTER YOUR USERNAME"
+              class="textBox"
+              autofocus="on"
+              required
+            />
+          </div>
+          <div class="clr"></div>
+        </div>
+        <!--First name-->
+
+        <!---Password------>
+        <div class="box">
+          <label for="password" class="fl fontLabel"><strong>PASSWORD</strong></label>
+         
+          <div class="fr">
+            <input
+              type="Password"
+              required
+              name="password"
+              placeholder="ENTER YOUR PASSWORD"
+              class="textBox"
+            />
+          </div>
+          <div class="clr"></div>
+        </div>
+        <!---Password---->
+
+        <!---Submit Button------>
+        <div class="box" style="background:red">
+          <input type="Submit" name="Submit" class="submit" value="SUBMIT" />
+        </div>
+        <!---Submit Button----->
+      </form>
+    </div>
+    <!--Body of Form ends--->
+  </body>
+</html>
+
